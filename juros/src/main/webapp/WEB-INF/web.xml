@@ -4,4 +4,13 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>DataTransfer</servlet-name>
+    <servlet-class>DataTransfer</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DataTransfer</servlet-name>
+    <url-pattern>/DataTransfer</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -7,15 +7,12 @@
 
     <body>
         <h1>Calculadora de Juros</h1>
-        <form action="src/main/java/servlet/DataTransfer.java" method="post">
+        <form action="DataTransfer" method="post">
             <label for="capital">Capital:</label><br>
                 <input type="number" min="1" id="capital" name="capital"><br>
 
-            <label for="dataIncio">Data Inicial:</label><br>
-                <input type="date" name="dataIncio" id="dataIncio"><br>
-
-            <label for="dataFinal">Data Final:</label><br>
-                <input type="date" name="dataFinal" id="dataFinal"><br>
+            <label for="tempo">Tempo:</label><br>
+                <input type="number" min="0" name="tempo" id="tempo"><br>
 
             <label for="percentual">Percentual:</label><br>
                 <input type="number" min="1" max="100" name="percentual" id="percentual"><br>
