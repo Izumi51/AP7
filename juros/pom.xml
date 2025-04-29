@@ -26,6 +26,6 @@
   </dependencies>
 
   <build>
-    <finalName>juros</finalName>
+    <finalName>calculadora-juros</finalName>
   </build>
 </project>

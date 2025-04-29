@@ -1,0 +1,104 @@
+/* styles.css */
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+html {
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="number"] {
+    width: 95%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Resultado */
+h1:not([style]) ~ p {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 20px 0;
+    color: #2e7d32;
+}
+
+/* Erros */
+h1[style="color: red"] ~ p {
+    background-color: #ffebee;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 20px 0;
+    color: #d32f2f;
+}
+
+a {
+    color: #2196F3;
+    text-decoration: none;
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 650px) {
+    body {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    input[type="number"] {
+        width: 90%;
+    }
+}

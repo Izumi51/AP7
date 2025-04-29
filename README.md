@@ -17,10 +17,10 @@ Uma aplicação web simples para calcular juros simples e compostos. Este projet
 - Cálculo de juros compostos
 - Interface amigável que permite ao usuário:
   - Informar o capital inicial
-  - Definir as datas inicial e final para o cálculo
+  - Definir o período de tempo
   - Especificar o percentual de juros
   - Escolher o tipo de juros (simples ou composto)
-  - Selecionar o que deseja visualizar no resultado (juros ou juros + capital)
+  - Selecionar o que deseja visualizar no resultado (Juros e/ou Montante)
 
 ## Pré-requisitos
 
@@ -59,17 +59,17 @@ juros/
 ├── src/
 │   └── main/
 │       ├── java/
-│       │   ├── controller/   # Controladores da aplicação
-│       │   ├── model/        # Modelos de dados e lógica de negócio
-│       │   └── servlet/      # Servlets para processamento HTTP
-│       ├── resources/        # Recursos e configurações
+│       │   ├── model/          # Modelos de dados e lógica de negócio
+│       │   └── servlet/        # Servlets para processamento HTTP
 │       └── webapp/
-│           ├── pag/          # Páginas JSP adicionais
-│           │   └── result.jsp # Página de resultado
-│           ├── WEB-INF/      # Configurações da aplicação web
-│           │   └── web.xml   # Arquivo de configuração da aplicação web
-│           └── index.jsp     # Página inicial
-└── pom.xml                   # Configuração do Maven
+│           ├── pag/            # Páginas JSP adicionais
+│           │   └── result.jsp  # Página de resultado
+|           |   └── erro.jsp    # Página de erro
+│           ├── WEB-INF/        # Configurações da aplicação web
+│           │   └── web.xml     # Arquivo de configuração da aplicação web
+│           └── index.jsp       # Página inicial
+|           └── styles.css      # Estilização das páginas  
+└── pom.xml                     # Configuração do Maven
 ```
 
 ## Como Contribuir

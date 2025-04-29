@@ -1,24 +1,26 @@
-<%@ page contentType="text/html;charset=UTF-8" isELIgnored="false" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<html>
+<html lang="pt-br">
     <head>
-        <title>Resultado</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resultado do Juros</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
+
     <body>
-        <h1>Resultado do Cálculo</h1>
+        <h1>Resultado</h1>
 
         <%
             Boolean test = (Boolean) request.getAttribute("mostrarJuros");
             if (test == true) {
-                System.out.println("<p>"+ request.getAttribute("juros"); + "</p>");
+                out.println("<h2>Juros</h2><p>"+ request.getAttribute("juros") + "</p>");
             }
 
             test = (Boolean) request.getAttribute("mostrarMontante");
             if (test == true) {
-                System.out.println("<p>"+ request.getAttribute("montante"); + "</p>");
+                out.println("<h2>Montante</h2><p>"+ request.getAttribute("montante") + "</p>");
             }
         %>
-
+        </br>
         <a href="index.jsp">Voltar</a>
     </body>
 </html>

@@ -42,9 +42,4 @@ public class Juros {
         montante = capital * Math.pow(1 + percentual, tempo);
         juros = montante - capital;
     }
-
-//    @Override
-//    public String toString() {
-//
-//    }
 }

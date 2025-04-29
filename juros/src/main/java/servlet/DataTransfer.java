@@ -5,13 +5,11 @@ import model.Juros;
 //Estou usando o tomcat 11, por isso tive que usar o jakarta e nao o javax
 import java.io.IOException;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.text.DecimalFormat;
 
-@WebServlet("/DataTransfer")
-//@WebServlet(name = "DataTransfer", value = "/DataTransfer")
 public class DataTransfer extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -27,6 +25,7 @@ public class DataTransfer extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
+            DecimalFormat df = new DecimalFormat("0.00");
             double capital = Double.parseDouble(request.getParameter("capital"));
             int tempo = Integer.parseInt(request.getParameter("tempo"));
             double percentual = Double.parseDouble(request.getParameter("percentual")) / 100;
@@ -53,8 +52,10 @@ public class DataTransfer extends HttpServlet {
                 calculo.calcularJurosComposto();
             }
 
-            request.setAttribute("juros", calculo.getJuros());
-            request.setAttribute("montante", calculo.getMontante());
+            double j = calculo.getJuros(), m = calculo.getMontante();
+
+            request.setAttribute("juros", df.format(calculo.getJuros()));
+            request.setAttribute("montante", df.format(calculo.getMontante()));
             request.setAttribute("mostrarJuros", mostrarJuros);
             request.setAttribute("mostrarMontante", mostrarMontante);
 
