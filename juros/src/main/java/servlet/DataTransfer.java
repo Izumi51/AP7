@@ -52,8 +52,6 @@ public class DataTransfer extends HttpServlet {
                 calculo.calcularJurosComposto();
             }
 
-            double j = calculo.getJuros(), m = calculo.getMontante();
-
             request.setAttribute("juros", df.format(calculo.getJuros()));
             request.setAttribute("montante", df.format(calculo.getMontante()));
             request.setAttribute("mostrarJuros", mostrarJuros);
